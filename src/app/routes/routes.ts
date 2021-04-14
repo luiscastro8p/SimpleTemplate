@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from '../layout/layout.component';
-
 export const routes: Routes = [
   {
     path: '',
@@ -24,12 +23,13 @@ export const routes: Routes = [
       },
     ],
   },
-
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginModule),
+  },
   {
     path: '**',
     redirectTo: '/home',
   },
 ];
-
-/* loadChildren: () =>
-      import('./home/home.module').then((m) => m.FeatureModule), */
