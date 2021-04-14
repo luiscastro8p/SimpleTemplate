@@ -10,7 +10,17 @@ export const routes: Routes = [
       {
         path: 'home',
         loadChildren: () =>
-          import('./home/home.module').then((m) => m.FeatureModule),
+          import('./home/home.module').then((m) => m.HomeModule),
+      },
+      {
+        path: 'perfil',
+        loadChildren: () =>
+          import('./perfil/perfil.module').then((m) => m.PerfilModule),
+      },
+      {
+        path: 'contacto',
+        loadChildren: () =>
+          import('./contacto/contacto.module').then((m) => m.ContactoModule),
       },
     ],
   },
