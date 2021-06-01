@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './routes';
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [CommonModule, RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
   providers: [],
 })
